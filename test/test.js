@@ -57,6 +57,26 @@ describe('nearest', () => {
     });
   });
 
+  describe.only('similar hue', () => {
+    it('should match a lesser hue', () => {
+      expect(nearest(brandColors, brandColors.coral.hue(350)).color).to.eq(
+        'coral'
+      );
+    });
+
+    it('should match a greater hue', () => {
+      expect(nearest(brandColors, brandColors.coral.hue(355)).color).to.eq(
+        'coral'
+      );
+    });
+
+    it('should match a similar hue with a different sign', () => {
+      expect(nearest(brandColors, brandColors.coral.hue(10)).color).to.eq(
+        'coral'
+      );
+    });
+  });
+
   describe('no brand colors', () => {
     const brandColors = {};
 
