@@ -4,7 +4,7 @@ const nearest = require('..');
 const Color = require('color');
 const pkgName = require('../package.json').name;
 
-const config = findConfig.require('nearest-color.json');
+const config = findConfig.require('nearest-color.json', { cwd: __dirname });
 if (!config) {
   console.log(pkgName + ' configuration not found');
   process.exit(-1);
