@@ -16,6 +16,7 @@
     "mocha": "^4.0.1"
   },
   "dependencies": {
+    "color": "^2.0.1",
     "find-config": "^1.0.0"
   },
   "peerDependencies": {
