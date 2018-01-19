@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Kevin Yank",
   "license": "MIT",
+  "bin": {
+    "nearest-color-shade": "bin/cli.js"
+  },
   "scripts": {
     "test": "mocha"
   },
@@ -13,6 +16,7 @@
     "mocha": "^4.0.1"
   },
   "dependencies": {
-    "color": "^2.0.1"
+    "color": "^2.0.1",
+    "find-config": "^1.0.0"
   }
 }
